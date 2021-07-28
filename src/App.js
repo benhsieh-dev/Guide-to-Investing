@@ -6,7 +6,7 @@ import './App.css';
 import HomePage from './pages/homepage.component';
 import RealEstate from './components/real_estate/real_estate.component'; 
 import Equities from './components/Equities/equities.component';
-import DigitalCurrencies from './components/digital_currencies/digital_currencies.component';
+import CryptoCurrencies from './components/crypto_currencies/crypto_currencies.component';
 import PreciousMetals from './components/precious_metals/precious_metals.component';
 import Bonds from './components/bonds/bonds.component'; 
 
@@ -22,7 +22,7 @@ class App extends Component {
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/real_estate">Real Estate</Link></li>
                 <li><Link to="/equities">Equities</Link></li>
-                <li><Link to="/digital_currencies">Digital Currencies</Link></li>
+                <li><Link to="/crypto_currencies">Crypto Currencies</Link></li>
                 <li><Link to="/precious_metals">Precious Metals</Link></li>
                 <li><Link to="/bonds">Bonds</Link></li>
               </ul>
@@ -32,7 +32,7 @@ class App extends Component {
                 <Route exact path="/" component={HomePage} />
                 <Route path="/real_estate" component={RealEstate} />
                 <Route path="/equities" component={Equities} />
-                <Route path="/digital_currencies" component={DigitalCurrencies} />
+                <Route path="/crypto_currencies" component={CryptoCurrencies} />
                 <Route path="/precious_metals" component={PreciousMetals} />
                 <Route path="/bonds" component={Bonds} />
                 
