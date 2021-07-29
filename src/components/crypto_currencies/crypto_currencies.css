@@ -1,16 +1,11 @@
-/* .digitalCurrencies {
-    width: 80%;
-    text-align: left; 
-    margin: auto; 
-} */
-
 .crypto-currencies {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
-  /* background-color: #1a1a1c;
-  color: #fff; */
+  /* unique coloring theme for crypto currencies page */
+  background-color: #1a1a1c;
+  color: #fff;
 }
 
 .coin-intro {
@@ -120,9 +115,9 @@
     #7918f2 48%,
     #4801ff 100%
   );
-  /* color: #e2e2e2; */
+  color: #e2e2e2;
 }
 
-/* .coin-input::placeholder {
+.coin-input::placeholder {
   color: #e2e2e2; 
-} */
+}
