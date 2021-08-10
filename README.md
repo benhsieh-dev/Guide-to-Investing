@@ -11,5 +11,6 @@ App having to do with investing topics
 * Axios
 * HTML3
 * CSS5
+* React Tabs
   
 [Project on Heroku](https://guide-to-investing.herokuapp.com/)

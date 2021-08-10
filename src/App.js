@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { HashRouter, Route, Link } from 'react-router-dom';
 
+import { Tab, Tabs, TabList } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css'; 
+
 import './App.css';
 
 import HomePage from './pages/homepage.component';
@@ -17,31 +20,50 @@ class App extends Component {
     return (
       <HashRouter basename="/">
         <div className="App">
-            <div>
-              <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/real_estate">Real Estate</Link></li>
-                <li><Link to="/equities">Equities</Link></li>
-                <li><Link to="/crypto_currencies">Crypto Currencies</Link></li>
-                <li><Link to="/precious_metals">Precious Metals</Link></li>
-                <li><Link to="/bonds">Bonds</Link></li>
-              </ul>
+          <div>
 
-              <hr />
+            <Tabs>
+              <TabList>
+                <Tab>
+                  <Link to="/">Home</Link>
+                </Tab>
+                <Tab>
+                  <Link to="/real_estate">Real Estate</Link>
+                </Tab>
+                <Tab>
+                  <Link to="/equities">Equities</Link>
+                </Tab>
+                <Tab>
+                  <Link to="/crypto_currencies">Crypto Currencies</Link>
+                </Tab>
+                <Tab>
+                  <Link to="/precious_metals">Precious Metals</Link>
+                </Tab>
+                <Tab>
+                  <Link to="/bonds">Bonds</Link>
+                </Tab>
+              </TabList>
 
-                <Route exact path="/" component={HomePage} />
-                <Route path="/real_estate" component={RealEstate} />
-                <Route path="/equities" component={Equities} />
-                <Route path="/crypto_currencies" component={CryptoCurrencies} />
-                <Route path="/precious_metals" component={PreciousMetals} />
-                <Route path="/bonds" component={Bonds} />
-                
-            </div>
-            <div className="image">
-                <img src={Investing} alt='Investing' />
-            </div>  
+              {/* <TabPanel>
+                <h2>Any content 1</h2>
+              </TabPanel>
+              <TabPanel>
+                <h2>Any content 2</h2>
+              </TabPanel>*/}
+            </Tabs>
+
+            <Route exact path="/" component={HomePage} />
+            <Route path="/real_estate" component={RealEstate} />
+            <Route path="/equities" component={Equities} />
+            <Route path="/crypto_currencies" component={CryptoCurrencies} />
+            <Route path="/precious_metals" component={PreciousMetals} />
+            <Route path="/bonds" component={Bonds} />
+          </div>
+          <div className="image">
+            <img src={Investing} alt="Investing" />
+          </div>
         </div>
-      </HashRouter> 
+      </HashRouter>
     );
   }
 }
