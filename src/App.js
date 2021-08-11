@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { HashRouter, Route, Link } from 'react-router-dom';
 
-import { Tab, Tabs, TabList } from 'react-tabs';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css'; 
 
 import './App.css';
@@ -22,7 +22,7 @@ class App extends Component {
         <div className="App">
           <div>
 
-            <Tabs>
+            <Tabs defaultIndex={1}>
               <TabList>
                 <Tab>
                   <Link to="/">Home</Link>
@@ -44,12 +44,16 @@ class App extends Component {
                 </Tab>
               </TabList>
 
-              {/* <TabPanel>
-                <h2>Any content 1</h2>
+              <TabPanel>
+              {/* <h2>Any content 1</h2>*/}
               </TabPanel>
               <TabPanel>
-                <h2>Any content 2</h2>
-              </TabPanel>*/}
+                {/* <h2>Any content 2</h2>*/}
+              </TabPanel>
+              <TabPanel></TabPanel>
+              <TabPanel></TabPanel>
+              <TabPanel></TabPanel>
+              <TabPanel></TabPanel>
             </Tabs>
 
             <Route exact path="/" component={HomePage} />

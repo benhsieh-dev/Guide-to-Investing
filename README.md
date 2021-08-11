@@ -12,5 +12,9 @@ App having to do with investing topics
 * HTML3
 * CSS5
 * React Tabs
+* Axios 
   
 [Project on Heroku](https://guide-to-investing.herokuapp.com/)
+
+## Future Considerations
+* Real Estate API
