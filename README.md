@@ -13,8 +13,10 @@ App having to do with investing topics
 * CSS5
 * React Tabs
 * Axios 
+* Real Estate USA API
   
 [Project on Heroku](https://guide-to-investing.herokuapp.com/)
 
 ## Future Considerations
-* Real Estate API
+* Refine data from Real Estate API
+* Style Tabs Navigation

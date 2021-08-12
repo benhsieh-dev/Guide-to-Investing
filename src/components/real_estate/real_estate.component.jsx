@@ -2,27 +2,24 @@ import React from 'react';
 
 import realEstateModule from './real_estate.module.css'; 
 
-import axios from "axios";
-
-const options = {
-  method: "GET",
-  url: "https://zillow-com1.p.rapidapi.com/property",
-  params: { zpid: "2080998890" },
-  headers: {
-    "x-rapidapi-key": "b519a2b20amsh014be75ec062cdap1aaac1jsn918f03506c38",
-    "x-rapidapi-host": "zillow-com1.p.rapidapi.com",
-  },
-};
-
-axios
-  .request(options)
-  .then(function (response) {
-    console.log(response.data);
+fetch(
+  "https://real-estate-usa.p.rapidapi.com/api/v1/properties?postal_code=94105&offset=0&limit=200",
+  {
+    method: "GET",
+    headers: {
+      "x-rapidapi-key": "b519a2b20amsh014be75ec062cdap1aaac1jsn918f03506c38",
+      "x-rapidapi-host": "real-estate-usa.p.rapidapi.com",
+    },
+  }
+)
+  .then(response => response.json())
+  .then((response) => {
+    console.log(response);
+    console.log(response.properties);
   })
-  .catch(function (error) {
-    console.error(error);
+  .catch((err) => {
+    console.error(err);
   });
-
 
 
 const RealEstate = () => (
