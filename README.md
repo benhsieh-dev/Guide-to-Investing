@@ -4,15 +4,14 @@ App having to do with investing topics
 
 ## Technologies Used
 
+* Axios
+* CSS5
+* Goingecko API
+* HTML3
+* Node JS
 * React JS
 * React Router DOM
-* Node JS
-* Goingecko API
-* Axios
-* HTML3
-* CSS5
 * React Tabs
-* Axios 
 * Real Estate USA API
   
 [Project on Heroku](https://guide-to-investing.herokuapp.com/)
