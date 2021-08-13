@@ -127,7 +127,7 @@ export default () => {
         <ul>
           {properties.map((property, idx) => (
             <div key={idx}>
-              <li>{property.id}</li>
+              <li>{property.permalink}</li>
             </div>
           ))}
         </ul>
