@@ -33,6 +33,8 @@ const options = {
   },
 };
 
+
+
 // axios
 //   .request(options)
 //   .then(function (response) {
@@ -70,9 +72,10 @@ export default () => {
     axios
       .request(options)
       .then(function (response) {
-        console.log(response.data);
+        console.log(response.data.schools);
+        setProperties(response.data.schools);
+        // console.log(`these are the ${properties}`);
       })
-      .then((response) => setProperties(response.data.schools))
       .catch(function (error) {
         console.error(error);
       });
@@ -84,7 +87,13 @@ export default () => {
     <p>Location is very important in real estate investments. From personal experience, I believe
     that New York real estate is uniquely strong due to its population density among other 
     factors. Maryland, on the other hand, offers better bargain per square foot of real estate.</p>
-    {properties}
+    <div>
+      <ul>
+        {properties.map(school => (
+          <li key={school.id}>{school.name}</li>
+        ))}
+      </ul>
+    </div>
   </div>
   )
 }
