@@ -22,7 +22,7 @@ class App extends Component {
         <div className="App">
           <div>
 
-            <Tabs defaultIndex={1}>
+            <Tabs defaultIndex={0}>
               <TabList>
                 <Tab>
                   <Link to="/">Home</Link>
