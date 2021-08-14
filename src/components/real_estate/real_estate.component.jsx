@@ -4,49 +4,9 @@ import React, {useEffect, useState} from 'react';
 
 import './real_estate.css'; 
 
-// fetch(
-//   "https://real-estate-usa.p.rapidapi.com/api/v1/properties?postal_code=60611&offset=0&limit=200",
-//   {
-//     method: "GET",
-//     headers: {
-//       "x-rapidapi-key": "b519a2b20amsh014be75ec062cdap1aaac1jsn918f03506c38",
-//       "x-rapidapi-host": "real-estate-usa.p.rapidapi.com",
-//     },
-//   }
-// )
-//   .then(response => response.json())
-//   .then((response) => {
-//     console.log(response);
-//     // console.log(response.properties);
-//   })
-//   .catch((err) => {
-//     console.error(err);
-//   });
 
 // import axios from "axios";
 
-// const options = {
-//   method: "GET",
-//   url: "https://real-estate-usa.p.rapidapi.com/api/v1/schools",
-//   params: { lat: "35.129431", lon: "-117.937021" },
-//   headers: {
-//     "x-rapidapi-key": "b519a2b20amsh014be75ec062cdap1aaac1jsn918f03506c38",
-//     "x-rapidapi-host": "real-estate-usa.p.rapidapi.com",
-//   },
-// };
-
-import axios from "axios";
-
-
-
-// axios
-//   .request(options)
-//   .then(function (response) {
-//     console.log(response.data);
-//   })
-//   .catch(function (error) {
-//     console.error(error);
-//   });
 
 // real estate api
 // import axios from "axios";
@@ -69,15 +29,15 @@ import axios from "axios";
 
 export default () => {
   const [properties, setProperties] = useState([]);
-  const options = {
-    method: "GET",
-    url: "https://real-estate-usa.p.rapidapi.com/api/v1/properties",
-    params: { postal_code: "60611", offset: "0", limit: "200" },
-    headers: {
-      "x-rapidapi-key": "b519a2b20amsh014be75ec062cdap1aaac1jsn918f03506c38",
-      "x-rapidapi-host": "real-estate-usa.p.rapidapi.com",
-    },
-  };
+  // const options = {
+  //   method: "GET",
+  //   url: "https://real-estate-usa.p.rapidapi.com/api/v1/properties",
+  //   params: { postal_code: "60611", offset: "0", limit: "200" },
+  //   headers: {
+  //     "x-rapidapi-key": "b519a2b20amsh014be75ec062cdap1aaac1jsn918f03506c38",
+  //     "x-rapidapi-host": "real-estate-usa.p.rapidapi.com",
+  //   },
+  // };
 
   // useEffect(() => {
   //   axios
@@ -92,40 +52,40 @@ export default () => {
   //     });
   // }, [])
 
-  useEffect(() => {
-    axios
-      .request(options)
-      .then((response) => {
-        console.log(response.data.properties);
-        setProperties(response.data.properties);
-        // console.log(`these are the ${properties}`);
-      })
-      .catch((error) => console.error(error)
-      );
-  }, [options, properties]);
-
   // useEffect(() => {
-  //   fetch(
-  //     "https://real-estate-usa.p.rapidapi.com/api/v1/properties?postal_code=94105&offset=0&limit=200",
-  //     {
-  //       method: "GET",
-  //       headers: {
-  //         "x-rapidapi-key":
-  //           "b519a2b20amsh014be75ec062cdap1aaac1jsn918f03506c38",
-  //         "x-rapidapi-host": "real-estate-usa.p.rapidapi.com",
-  //       },
-  //     }
-  //   )
-  //     .then((response) => response.json())
+  //   axios
+  //     .request(options)
   //     .then((response) => {
-  //       // console.log(response);
-  //       console.log(response.properties);
-  //       setProperties(response.properties);
+  //       console.log(response.data.properties);
+  //       setProperties(response.data.properties);
+  //       // console.log(`these are the ${properties}`);
   //     })
-  //     .catch((err) => {
-  //       console.error(err);
-  //     });
-  // }, [])
+  //     .catch((error) => console.error(error)
+  //     );
+  // }, [options, properties]);
+
+  useEffect(() => {
+    fetch(
+      "https://real-estate-usa.p.rapidapi.com/api/v1/properties?postal_code=60611&offset=0&limit=200",
+      {
+        method: "GET",
+        headers: {
+          "x-rapidapi-key":
+            "b519a2b20amsh014be75ec062cdap1aaac1jsn918f03506c38",
+          "x-rapidapi-host": "real-estate-usa.p.rapidapi.com",
+        },
+      }
+    )
+      .then((response) => response.json())
+      .then((response) => {
+        // console.log(response);
+        console.log(response.properties);
+        setProperties(response.properties);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }, [])
 
   return (
     <div className="real_estate">
