@@ -22,7 +22,7 @@ export default () => {
       axios
         .request(options)
         .then(function (response) {
-          console.log(response.data);
+          console.log(response);
           // setCprices(response.data); 
         })
         .catch(function (error) {

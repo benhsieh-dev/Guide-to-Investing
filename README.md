@@ -6,6 +6,7 @@ App having to do with investing topics
 
 * Axios
 * CSS5
+* Current Precious Metal API
 * Goingecko API
 * HTML3
 * Node JS
