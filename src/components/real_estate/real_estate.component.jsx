@@ -99,12 +99,19 @@ export default () => {
         hand, offers better bargain per square foot of real estate.
       </p>
       <div>
-        <ul>
+        {/* <ul>
           {properties === undefined ? properties.map((property, idx) => (
             <div key={idx}>
               <li>{property.permalink}</li>
             </div>
           )) : <div></div>}
+          </ul> */}
+        <ul>
+          {properties.map((property, idx) => (
+            <div key={idx}>
+              <li>{property.permalink}</li>
+            </div>
+          ))}
         </ul>
       </div>
     </div>
