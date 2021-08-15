@@ -15,7 +15,7 @@ export default () => {
       )
       .then((res) => {
         setCoins(res.data);
-        console.log(res.data);
+        // console.log(res.data);
       })
       .catch((error) => console.log(error));
   }, []);
@@ -55,9 +55,9 @@ export default () => {
         </form>
       </div>
 
-      {filteredCoins.map((coin) => {
+      {filteredCoins.map((coin, idx) => {
         return (
-          <div className="coin-container">
+          <div className="coin-container" key={idx}>
             <div className="coin-row">
               <div className="coin">
                 <img src={coin.image} alt="crypto" />
