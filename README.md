@@ -15,7 +15,7 @@ App having to do with investing topics
 * React Tabs
 * Real Estate USA API
   
-[Project on Heroku](https://guide-to-investing.herokuapp.com/)
+[Heroku Live Site](https://guide-to-investing.herokuapp.com/)
 
 ## Future Considerations
 * Refine data from Real Estate API

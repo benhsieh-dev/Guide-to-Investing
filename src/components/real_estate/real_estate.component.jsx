@@ -71,11 +71,13 @@ export default () => {
         method: "GET",
         headers: {
           "x-rapidapi-key":
-            "b519a2b20amsh014be75ec062cdap1aaac1jsn918f03506c38",
+            // "b519a2b20amsh014be75ec062cdap1aaac1jsn918f03506c38",
+          `${process.env.REACT_APP_REAL_ESTATE_USA_KEY}`,
           "x-rapidapi-host": "real-estate-usa.p.rapidapi.com",
         },
       }
     )
+      // .then(console.log(process.env))
       .then((response) => response.json())
       .then((response) => {
         // console.log(response);
@@ -98,11 +100,11 @@ export default () => {
       </p>
       <div>
         <ul>
-          {properties.map((property, idx) => (
+          {properties === undefined ? properties.map((property, idx) => (
             <div key={idx}>
               <li>{property.permalink}</li>
             </div>
-          ))}
+          )) : <div></div>}
         </ul>
       </div>
     </div>
