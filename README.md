@@ -13,7 +13,7 @@ App having to do with investing topics
 * React JS
 * React Router DOM
 * React Tabs
-* Real Estate USA API
+* Real Estate API
   
 [Heroku Live Site](https://guide-to-investing.herokuapp.com/)
 
