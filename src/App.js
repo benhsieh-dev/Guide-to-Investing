@@ -14,6 +14,7 @@ import PreciousMetals from './components/precious_metals/precious_metals.compone
 import Bonds from './components/bonds/bonds.component'; 
 
 import Investing from './images/dollar-cost-vs-lump-sum-investing-2.jpg'; 
+import Collectibles from './components/collectibles/collectibles.component';
 
 class App extends Component {
   render() {
@@ -27,21 +28,24 @@ class App extends Component {
                 <Tab>
                   <Link to="/">Home</Link>
                 </Tab>
-                <Tab>
-                  <Link to="/real_estate">Real Estate</Link>
+                 <Tab>
+                  <Link to="/bonds">Bonds</Link>
                 </Tab>
-                <Tab>
-                  <Link to="/equities">Equities</Link>
+                 <Tab>
+                  <Link to="/collectibles">Collectibles</Link>
                 </Tab>
                 <Tab>
                   <Link to="/crypto_currencies">Crypto Currencies</Link>
                 </Tab>
-                <Tab>
+                 <Tab>
+                  <Link to="/equities">Equities</Link>
+                </Tab>
+                  <Tab>
                   <Link to="/precious_metals">Precious Metals</Link>
                 </Tab>
                 <Tab>
-                  <Link to="/bonds">Bonds</Link>
-                </Tab>
+                  <Link to="/real_estate">Real Estate</Link>
+                </Tab>                            
               </TabList>
 
               <TabPanel>
@@ -57,11 +61,12 @@ class App extends Component {
             </Tabs>
 
             <Route exact path="/" component={HomePage} />
-            <Route path="/real_estate" component={RealEstate} />
-            <Route path="/equities" component={Equities} />
-            <Route path="/crypto_currencies" component={CryptoCurrencies} />
-            <Route path="/precious_metals" component={PreciousMetals} />
             <Route path="/bonds" component={Bonds} />
+            <Route path="/collectibles" component={Collectibles} />
+            <Route path="/crypto_currencies" component={CryptoCurrencies} />
+            <Route path="/equities" component={Equities} />
+            <Route path="/precious_metals" component={PreciousMetals} />
+            <Route path="/real_estate" component={RealEstate} />
           </div>
           <div className="image">
             <img src={Investing} alt="Investing" />
