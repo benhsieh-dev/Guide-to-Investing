@@ -13,8 +13,10 @@ import CryptoCurrencies from './components/crypto_currencies/crypto_currencies.c
 import PreciousMetals from './components/precious_metals/precious_metals.component';
 import Bonds from './components/bonds/bonds.component'; 
 
-import Investing from './images/dollar-cost-vs-lump-sum-investing-2.jpg'; 
+// import Investing from './images/dollar-cost-vs-lump-sum-investing-2.jpg'; 
+import Investing from "./images/skyscrapers.jpg";
 import Collectibles from './components/collectibles/collectibles.component';
+import Registration from './components/registration/registration';
 
 
  
@@ -54,10 +56,14 @@ function App() {
               <Tab>
                 <Link to="/real_estate">Real Estate</Link>
               </Tab>
+              <Tab>
+                <Link to="/registration">Registration</Link>
+              </Tab>
             </TabList>
 
             <TabPanel>{/* <h2>Any content 1</h2>*/}</TabPanel>
             <TabPanel>{/* <h2>Any content 2</h2>*/}</TabPanel>
+            <TabPanel></TabPanel>
             <TabPanel></TabPanel>
             <TabPanel></TabPanel>
             <TabPanel></TabPanel>
@@ -72,9 +78,10 @@ function App() {
           <Route path="/equities" component={Equities} />
           <Route path="/precious_metals" component={PreciousMetals} />
           <Route path="/real_estate" component={RealEstate} />
+          <Route path="/registration" component={Registration} />
         </div>
         <div className="image">
-          <img src={Investing} alt="Investing" />
+          <img className="skyscrapers" src={Investing} alt="Investing" />
         </div>
       </div>
     </HashRouter>
